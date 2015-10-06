@@ -1,19 +1,19 @@
-Tudo que você precisa para um sistema web... <br>
+Tudo que você precisa para um sistema web... 
 
-Com uma combinação de Droid + Web. <br>
-Confira no MarkFullDroid( link ), a necessidade<br> 
+Com uma combinação de Droid + Web. 
+Confira no MarkFullDroid( link ), a necessidade 
 
 Configuração de Building no maven, uma auta configuração sem a necessidade de configurar o servidor. 
-<br>
-Serviços :<br> 
- -- REST( xml , json)<br>
- -- SOAP<br>
-<br>
-Banco de Dados :<br>
- -- PostgreSQL <br>
-<br>
-Ferramenta Utilizada(frameworks):<br>
- -- JPA + HIBERNATE<br>
- -- JSF + PRIMEFACES<br>
+
+Serviços : 
+ -- REST( xml , json)
+ -- SOAP
+
+Banco de Dados :
+ -- PostgreSQL 
+
+Ferramenta Utilizada(frameworks):
+ -- JPA + HIBERNATE
+ -- JSF + PRIMEFACES
 
 
