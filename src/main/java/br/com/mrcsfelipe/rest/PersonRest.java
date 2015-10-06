@@ -1,7 +1,5 @@
 package br.com.mrcsfelipe.rest;
 
-import java.util.List;
-
 import javax.ejb.EJB;
 import javax.enterprise.context.RequestScoped;
 import javax.ws.rs.Consumes;
@@ -12,6 +10,7 @@ import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 import javax.ws.rs.core.Response.Status;
+
 import br.com.mrcsfelipe.business.PersonBusinessFacede;
 import br.com.mrcsfelipe.model.Person;
 
@@ -24,8 +23,10 @@ public class PersonRest {
 	
 	@GET
     @Produces({MediaType.APPLICATION_JSON, MediaType.APPLICATION_XML})
-    public List<Person> listAllMembers() {
-        return personBusiness.getPersons();
+    public Personxmls listAllMembers() {
+		Personxmls xml = new Personxmls();
+		xml.setPersons(personBusiness.getPersons());
+        return xml;
     }
 	
 	@POST
