@@ -31,7 +31,7 @@ public class Person implements Serializable {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = SEQUENCE_NAME)
-	@XmlElement(name="identify")
+	@XmlElement(name="identify", nillable= true)
 	private Integer id;
 	
 	@XmlElement(name="nome")

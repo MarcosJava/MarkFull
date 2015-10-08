@@ -7,12 +7,12 @@ import javax.ws.rs.GET;
 import javax.ws.rs.POST;
 import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
-import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 import javax.ws.rs.core.Response.Status;
 
 import br.com.mrcsfelipe.business.PersonBusinessFacede;
 import br.com.mrcsfelipe.model.Person;
+import br.com.mrcsfelipe.rest.model.PersonsModel;
 
 @Path("/persons")
 @RequestScoped
@@ -22,18 +22,20 @@ public class PersonRest {
 	PersonBusinessFacede personBusiness;
 	
 	@GET
-    @Produces({MediaType.APPLICATION_JSON, MediaType.APPLICATION_XML})
-    public Personxmls listAllMembers() {
-		Personxmls xml = new Personxmls();
+    @Produces({"application/json"})
+    public PersonsModel getPersons() {
+		PersonsModel xml = new PersonsModel();
 		xml.setPersons(personBusiness.getPersons());
         return xml;
     }
 	
 	@POST
-    @Consumes(MediaType.APPLICATION_JSON)
-    @Produces(MediaType.APPLICATION_JSON)
+    @Consumes({ "application/json" })
+    @Produces({ "application/json" })
     public Response createPerson(Person person){
-		 
+		
+		if(person.getId() == 0) person.setId(null);
+		
 		boolean complete = isValideField(person);
 		if(complete){
 			this.personBusiness.save(person);
@@ -44,6 +46,8 @@ public class PersonRest {
 		
 		
 	}
+	
+	
 	
 	
 	public boolean isValideField(Person person){

@@ -1,22 +1,19 @@
-package br.com.mrcsfelipe.rest;
+package br.com.mrcsfelipe.rest.model;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 
 import br.com.mrcsfelipe.model.Person;
 
-@XmlAccessorType(XmlAccessType.FIELD)
-public class Personxmls {
+public class PersonsModel {
 	
 	
 	private List<Person> persons = new ArrayList<>();
 	
 	
-	public Personxmls() {
+	public PersonsModel() {
 		
 	}
 	
