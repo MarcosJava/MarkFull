@@ -37,6 +37,14 @@ public class PersonBusinessFacede {
 
 	}
 	
+	public void bulkSave(List<Person> persons){
+		for(Person p : persons){
+			if(!hasField(p))
+				return;
+		}
+		this.personJPA.savePersonsBulks(persons);
+	}
+	
 	public List<Person> getPersons(){
 		return this.personJPA.findAll();
 	}
