@@ -3,11 +3,6 @@ package br.com.mrcsfelipe.data;
 import java.util.List;
 
 import javax.ejb.Stateless;
-import javax.ejb.TransactionAttribute;
-import javax.ejb.TransactionAttributeType;
-
-import org.hibernate.Session;
-import org.hibernate.Transaction;
 
 import br.com.mrcsfelipe.model.Person;
 
