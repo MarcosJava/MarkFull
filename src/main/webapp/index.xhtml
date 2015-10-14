@@ -21,7 +21,7 @@
   	</p:panelGrid>
   	<p:commandButton  value="Salvar" 
   					  action="#{personMB.createPerson()}" 
-  					  update=":dtPersons, form"/>
+  					  update=":dtPersons form"/>
   </h:form>
   
   
@@ -36,6 +36,20 @@
   			<f:convertDateTime dateStyle="medium" locale="pt_Br"/>
   		</p:outputLabel>
   	</p:column>
+  	
+  	<p:column>
+  		<p:commandButton value="Excluir" action="#{personMB.deletar()}" update=":dtPersons">
+  			<f:setPropertyActionListener target="#{personMB.person}" value="#{person}"/>
+  			<p:confirm header="Confirmação" message="Deseja deletar o comembro ?" icon="ui-icon-alert" />
+  		</p:commandButton>
+  		
+  		<p:confirmDialog global="true" showEffect="fade" hideEffect="explode">
+			<p:commandButton value="Sim" type="button" styleClass="ui-confirmdialog-yes" icon="ui-icon-check" />
+			<p:commandButton value="Não" type="button" styleClass="ui-confirmdialog-no" icon="ui-icon-close" />
+		</p:confirmDialog>
+  		
+  	</p:column>
+  	
   </p:dataTable>
   
 </h:body>

@@ -30,6 +30,15 @@ public class PersonBusinessFacede {
 		return true;
 	}
 	
+	private boolean hasFieldWithId(Person person) {
+		
+		if (person.getId() == null || person.getId() == 0){
+			return false;
+		}
+		
+		return true;
+	}	
+	
 	public void save(Person person){
 		boolean complete = hasField(person);
 		if(complete)
@@ -37,6 +46,21 @@ public class PersonBusinessFacede {
 
 	}
 	
+	public void deletar(Integer id){
+		Person person = new Person();
+		person.setId(id);
+		boolean complete = hasFieldWithId(person);
+		if(complete)
+			this.personJPA.delete(person.getId(), Person.class);
+	}
+	public void deletar(Person person){
+		boolean complete = hasFieldWithId(person);
+		if(complete)
+			this.personJPA.delete(person.getId(), Person.class);
+	}
+	
+	
+
 	public void bulkSave(List<Person> persons){
 		for(Person p : persons){
 			if(!hasField(p))

@@ -37,6 +37,13 @@ public class PersonMB {
 		cleanValues();
 		return null;
 	}
+	
+	public void deletar(){
+		System.out.println(person.toString());
+		personBusiness.deletar(person);
+		cleanValues();
+		getPersons();
+	}
 
 	public Person getPerson() {
 		return person;

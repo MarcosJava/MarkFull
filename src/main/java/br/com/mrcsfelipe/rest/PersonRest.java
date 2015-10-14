@@ -3,10 +3,13 @@ package br.com.mrcsfelipe.rest;
 import javax.enterprise.context.RequestScoped;
 import javax.inject.Inject;
 import javax.ws.rs.Consumes;
+import javax.ws.rs.DELETE;
 import javax.ws.rs.GET;
 import javax.ws.rs.POST;
 import javax.ws.rs.Path;
+import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
+import javax.ws.rs.QueryParam;
 import javax.ws.rs.core.Response;
 import javax.ws.rs.core.Response.Status;
 
@@ -74,6 +77,18 @@ public class PersonRest {
 			return Response.status(Status.BAD_REQUEST).entity("Campos Invalidos").build();
 		}
 		
+	}
+	
+	@DELETE
+	@Path("/delete/")
+    @Consumes({ "application/json" })
+    @Produces({ "application/json" })
+    public Response deletePerson(@QueryParam("id") Integer id){
+		
+		if(id == 0) return Response.status(Status.BAD_REQUEST).entity("Campos Invalidos").build();
+			
+		this.personBusiness.deletar(id);
+		return Response.accepted("Deletado Com Sucesso").build();
 		
 	}
 	
