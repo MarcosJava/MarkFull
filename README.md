@@ -15,5 +15,13 @@ Banco de Dados :
 Ferramenta Utilizada(frameworks):
  -- JPA + HIBERNATE
  -- JSF + PRIMEFACES
+ -- EJB 3.1
+ -- CDI
+ 
+<b> Observações </b>
+-- A utilização do EJB 3.1 foi apenas para demonstrar sua utilização. 
+-- O Projeto dessa maneira poderia ficar em apenas CDI com JSF, sem a necessidade do EJB. 
+ 
+ 
 
 
