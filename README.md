@@ -1,7 +1,7 @@
 <b>Tudo que você precisa para um sistema web... </b><br>
 
 Com uma combinação de Droid + Web. 
-Confira no MarkFullDroid( link ), a necessidade 
+Confira no MarkFullDroid( https://github.com/MarcosJava/MarkFullDroid ), a necessidade 
 
 Configuração de Building no maven, uma auta configuração sem a necessidade de configurar o servidor. 
 
