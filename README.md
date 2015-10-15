@@ -12,15 +12,16 @@ Serviços :
 Banco de Dados :
  -- PostgreSQL 
 
-Ferramenta Utilizada(frameworks):
- -- JPA + HIBERNATE
- -- JSF + PRIMEFACES
- -- EJB 3.1
- -- CDI
+Ferramenta Utilizada(frameworks):<br>
+ -- JPA + HIBERNATE<br>
+ -- JSF + PRIMEFACES<br>
+ -- EJB 3.1<br>
+ -- CDI<br>
+ <br>
+<b> Observações </b><br>
+-- A utilização do EJB 3.1 foi apenas para demonstrar sua utilização. <br>
+-- O Projeto dessa maneira poderia ficar em apenas CDI com JSF, sem a necessidade do EJB. <br>
  
-<b> Observações </b>
--- A utilização do EJB 3.1 foi apenas para demonstrar sua utilização. 
--- O Projeto dessa maneira poderia ficar em apenas CDI com JSF, sem a necessidade do EJB. 
  
  
 
