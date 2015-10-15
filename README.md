@@ -21,6 +21,7 @@ Ferramenta Utilizada(frameworks):<br>
 <b> Observações </b><br>
 -- A utilização do EJB 3.1 foi apenas para demonstrar sua utilização. <br>
 -- O Projeto dessa maneira poderia ficar em apenas CDI com JSF, sem a necessidade do EJB. <br>
+-- O Projeto esta em Portuglês ( Portugues mais Inglês ) não podendo ficar assim !! PADRONIZE SEUS PROJETOS <br>
  <br>
  <b> Necessidade :</b><br>
  -- JBoss as Wildfly  9.0.1 Final  instalado.<br>
