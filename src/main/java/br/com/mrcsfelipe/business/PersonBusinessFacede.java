@@ -46,14 +46,14 @@ public class PersonBusinessFacede {
 
 	}
 	
-	public void deletar(Integer id){
+	public void deletar(Integer id) throws Exception{
 		Person person = new Person();
 		person.setId(id);
 		boolean complete = hasFieldWithId(person);
 		if(complete)
 			this.personJPA.delete(person.getId(), Person.class);
 	}
-	public void deletar(Person person){
+	public void deletar(Person person) throws Exception{
 		boolean complete = hasFieldWithId(person);
 		if(complete)
 			this.personJPA.delete(person.getId(), Person.class);
