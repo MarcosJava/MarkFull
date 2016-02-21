@@ -21,7 +21,7 @@ import javax.xml.bind.annotation.XmlElement;
 @SequenceGenerator(name=Person.SEQUENCE_NAME, 
 				   sequenceName= Person.SEQUENCE_NAME,
 				   initialValue = 1, 
-				  // allocationSize = 53, a quantidade que vai ficar na memoria
+				  // allocationSize = 53, a candidate que vai ficar na memoria
 				   schema="public")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Person implements Serializable {
@@ -32,7 +32,7 @@ public class Person implements Serializable {
 	@Id
 	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = SEQUENCE_NAME)
 	@XmlElement(name="identify", nillable= true)
-	private Integer id;
+	private Integer id;	
 	
 	@XmlElement(name="nome")
 	private String nome;

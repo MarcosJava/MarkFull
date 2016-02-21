@@ -83,7 +83,7 @@ public class PersonRest {
 	@Path("/delete/")
     @Consumes({ "application/json" })
     @Produces({ "application/json" })
-    public Response deletePerson(@QueryParam("id") Integer id){
+    public Response deletePerson(@QueryParam("id") Integer id) throws Exception{
 		
 		if(id == 0) return Response.status(Status.BAD_REQUEST).entity("Campos Invalidos").build();
 			

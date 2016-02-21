@@ -9,6 +9,8 @@ import javax.ejb.TransactionAttributeType;
 import javax.ejb.TransactionManagement;
 import javax.ejb.TransactionManagementType;
 
+import br.com.mrcsfelipe.data.GenericRepositoryImpl.MatchMode;
+import br.com.mrcsfelipe.data.GenericRepositoryImpl.Order;
 import br.com.mrcsfelipe.data.PersonJPA;
 import br.com.mrcsfelipe.model.Person;
 
@@ -71,6 +73,21 @@ public class PersonBusinessFacede {
 	
 	public List<Person> getPersons(){
 		return this.personJPA.findAll();
+	}
+
+	public List<Person> getPersonByOrderAndProperty(Order asc, String property) {
+		return this.personJPA.findAll(asc, property);
+	}
+
+	public List<Person> getPersonByOrderPropertyWithStartAndEnd(Order asc,
+			String property, int start, int end) {
+		return this.personJPA.findAll(asc, start, end, property);
+	}
+
+	public List<Person> getPersonByProperty(String propertyName, String value,
+			MatchMode matchModeEnum, int begin, int end) {
+		// TODO Auto-generated method stub
+		return this.personJPA.findByProperty(propertyName, value, matchModeEnum, begin, end);
 	}
 
 }

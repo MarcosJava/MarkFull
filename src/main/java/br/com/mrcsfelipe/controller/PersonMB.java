@@ -38,11 +38,16 @@ public class PersonMB {
 		return null;
 	}
 	
-	public void deletar(){
+	public String deletar(){
 		System.out.println(person.toString());
-		personBusiness.deletar(person);
+		try {
+			personBusiness.deletar(person);
+		} catch (Exception e) {
+			return null;
+		}
 		cleanValues();
 		getPersons();
+		return null;
 	}
 
 	public Person getPerson() {
